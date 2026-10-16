@@ -1,0 +1,17 @@
+    .one {
+        background-color: #eee;
+        width: 300px;
+        float: left;
+        border: 20px solid red;
+    }
+    
+    .parent {
+        width: 600px;
+        overflow: hidden;
+        margin: 20px auto;
+        background-color: azure;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }

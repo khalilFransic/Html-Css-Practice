@@ -1,0 +1,33 @@
+.one span {
+    font-weight: bold;
+    color: white;
+    font-size: 60px;
+    background-color: aqua;
+}
+
+
+/*  هذا حل ليس سليم لتكبير اول حرف في النص  */
+
+.two::first-letter {
+    font-weight: bold;
+    color: white;
+    font-size: 60px;
+    background-color: aqua;
+}
+
+
+/*  هذا حل سليم استخدمنا عنصر مزيف بدال ال  span  */
+
+.three::first-line {
+    font-weight: bold;
+    color: white;
+    background-color: aqua;
+}
+
+
+/*  لتحديد السطر كامل */
+
+.three::selection {
+    background-color: blueviolet;
+    color: cadetblue
+}

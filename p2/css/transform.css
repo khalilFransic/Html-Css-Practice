@@ -1,0 +1,37 @@
+.in {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: rgba(238, 238, 238, 0.6);
+    ;
+    position: relative;
+    /* z-index: 3; */
+    isolation: isolate;
+    text-align: center;
+    /* transform: rotate(-10deg); */
+    justify-content: center;
+    align-content: center;
+    color: blue;
+}
+
+.in::after {
+    content: "";
+    position: absolute;
+    background-color: blue;
+    width: 300px;
+    height: 200px;
+    transform: rotate(7deg);
+    inset: 0;
+    z-index: -1;
+}
+
+.in::before {
+    content: "";
+    position: absolute;
+    background-color: gray;
+    transform: rotate(-7deg);
+    width: 300px;
+    height: 200px;
+    inset: 0;
+    z-index: -2;
+}

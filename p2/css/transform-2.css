@@ -1,0 +1,43 @@
+.in {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #eee;
+    color: black;
+    text-align: center;
+    position: relative;
+    line-height: 200px;
+    ;
+}
+
+.in::before {
+    content: "";
+    position: absolute;
+    /* height: 200px;
+    width: 200px; */
+    inset: -15px;
+    border: solid red 20px;
+    /* background-color: cadetblue; */
+    border-left-color: transparent;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.in::after {
+    content: "";
+    position: absolute;
+    inset: -30px;
+    border: solid blue 15px;
+    border-radius: 50%;
+    border-top-color: transparent;
+}
+
+.in:hover::after {
+    transform: rotate(360deg);
+    transition-duration: 1s;
+}
+
+.in:hover::before {
+    transform: rotate(-360deg);
+    transition-duration: 1s;
+}

@@ -1,0 +1,83 @@
+.f {
+    width: 400px;
+    height: 800px;
+    background-color: white;
+    display: grid;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0;
+}
+
+.one {
+    background-color: black;
+    grid-row: 1/6;
+    grid-column: 1;
+    height: 92%;
+}
+
+.two {
+    grid-column: 2;
+    grid-row: 1/2;
+}
+
+.four {
+    grid-column: 2;
+    grid-row: 3/4;
+}
+
+.five {
+    grid-column: 2;
+    grid-row: 5/6;
+    align-self: flex-start;
+}
+
+.two,
+.four,
+.five {
+    background-color: black;
+    height: 60%;
+}
+
+.nesting {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-color: yellow;
+    transform: translate(330px, 25px);
+    /* transform: translatey(40px); */
+    align-self: flex-end;
+    animation-name: animation;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation {
+    10% {
+        transform: translate(30px, 25px);
+    }
+    20% {
+        transform: translate(30px, 350px);
+    }
+    30% {
+        transform: translate(330px, 350px);
+    }
+    40% {
+        transform: translate(30px, 350px);
+    }
+    50% {
+        transform: translate(30px, 670px);
+    }
+    60% {
+        transform: translate(330px, 670px);
+    }
+    70% {
+        transform: translate(30px, 670px);
+    }
+    80% {
+        transform: translate(30px, 25px);
+    }
+}

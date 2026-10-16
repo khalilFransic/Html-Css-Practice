@@ -1,0 +1,71 @@
+        * {
+            box-sizing: border-box;
+            /* direction: rtl; */
+            /* لتغير اتجاه الخاصية   تحتاج فقط الى ال الاتجاه العام */
+        }
+        
+        .flex {
+            background-color: #eee;
+            width: 600px;
+            padding: 20px;
+            margin: 20px auto;
+            display: flex;
+            /* flex-direction: row-reverse;
+    flex-flow: wrap; */
+            /* justify-content: flex-end; */
+            /* flex-direction: column-reverse; */
+            /* justify-content: space-between; */
+            /* justify-content: space-around;
+            justify-content: space-evenly; */
+        }
+        
+        .flex div {
+            background-color: red;
+            color: white;
+            width: calc(100%/3);
+            /*  في حال اضافة عنصر خامس ولو انا عامل العرض 25 ما بأثر هو بيزبط و بضلوا جنب بعض  */
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .float {
+            overflow: hidden;
+            background-color: #eee;
+            width: 600px;
+            padding: 20px;
+            margin: 20px auto;
+        }
+        
+        .float div {
+            background-color: red;
+            float: left;
+            color: white;
+            width: calc(98%/3);
+            text-align: center;
+            padding: 20px;
+            /* تغير الاتجاه حتما يدوي */
+        }
+        
+        .three {
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+        
+        .one {
+            height: 80px;
+        }
+        
+        .two {
+            height: 120px;
+        }
+        
+        .center {
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            display: flex;
+            background-color: blue;
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }

@@ -1,0 +1,19 @@
+.in {
+    width: 600px;
+    position: relative;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+.in::after {
+    content: "";
+    background-image: linear-gradient(to right, red 50%, blue);
+    position: absolute;
+    height: 3px;
+    width: 600px;
+}
+
+.input {
+    width: 600px;
+    caret-color: aqua;
+}

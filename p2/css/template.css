@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.page {
+    height: 100vh;
+    display: grid;
+    background-color: aliceblue;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "logo logo nav nav nav nav nav nav nav nav ";
+}
+
+h2 {
+    grid-area: logo;
+    background-color: red;
+    color: white;
+}
+
+nav {
+    grid-area: nav;
+}

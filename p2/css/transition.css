@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+.one {
+    background-color: aqua;
+    width: 200px;
+    height: 100px;
+    transition-duration: 3s;
+    transition-delay: 2s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    /* transition: all 1s 2s linear;        هذا كود مختصر للخواص كلها   */
+}
+
+.one:hover {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 280px;
+}

@@ -1,0 +1,21 @@
+.parents {
+    padding: 10px;
+    background-color: red;
+    overflow: hidden;
+}
+
+.parents div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    display: inline-block;
+    width: calc(95/4);
+    margin-left: 1%;
+}
+
+
+/* content width : 100%
+5 sapcses 1% * 5 --> 5% from  content width 
+95%  available spaee 
+ 4 elements the width is 95/ 4-->  23.75 */

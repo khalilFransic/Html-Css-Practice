@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+.parent {
+    display: flex;
+    width: 600px;
+    height: 300px;
+    background-color: gainsboro;
+    gap: 10px;
+    color: azure;
+    text-align: center;
+}
+
+div {
+    background-color: brown;
+    width: 200px;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+}
+
+.one {
+    height: 50px;
+    order: 0;
+    width: 190px;
+}
+
+.two {
+    order: 1;
+    width: 190px;
+}
+
+.three {
+    order: 4;
+    height: 30px;
+    align-self: flex-end;
+    width: 190px;
+}
+
+.four {
+    order: 3;
+    width: 190px;
+}
+
+.five {
+    order: 2;
+    width: 190px;
+    align-items: stretch;
+}
+
+.six {
+    order: 5;
+    width: 190px;
+}

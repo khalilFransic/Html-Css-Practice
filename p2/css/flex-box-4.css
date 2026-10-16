@@ -1,0 +1,37 @@
+            * {
+                box-sizing: border-box;
+            }
+            
+            .parent {
+                display: flex;
+                background-color: azure;
+                height: 300px;
+                width: 600px;
+                flex-direction: column;
+                text-align: center;
+                color: aliceblue;
+            }
+            
+            .one,
+            .two,
+            .three {
+                width: 100px;
+                background-color: brown;
+                height: 100px;
+            }
+            
+            .one {
+                align-self: flex-end;
+                width: 30px;
+                align-items: center;
+            }
+            
+            .three {
+                align-self: flex-end;
+                width: 30px;
+            }
+            
+            .two {
+                width: 300px;
+                height: 60px
+            }

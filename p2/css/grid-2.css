@@ -1,0 +1,17 @@
+.grid {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    display: grid;
+    /* height: 100vh; */
+    grid-template-rows: 95% auto;
+    grid-template-columns: 3% 45% 45% 3%;
+    gap: 15px;
+    text-align: center;
+}
+
+div {
+    background-color: aqua;
+}

@@ -1,0 +1,66 @@
+            * {
+                box-sizing: border-box;
+            }
+            /*             
+            h1 {
+                color: white;
+                width: 150px;
+                padding: 10px;
+                position: relative;
+                text-align: center;
+            }
+            
+            h1::before {
+                content: "";
+                background-color: aqua;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: -1;
+                transform: skew(-10deg);
+                left: 0;
+                top: 0;
+            } */
+            
+            h1 {
+                width: 500px;
+                height: 180px;
+                background: #019688;
+                margin: 100px auto;
+                position: relative;
+                font-size: 60px;
+                font-family: "Times New Roman", serif;
+                font-weight: bold;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                /* مهم جدا */
+            }
+            /* الجزء المائل على اليسار */
+            
+            h1::before {
+                content: "";
+                position: absolute;
+                left: -150px;
+                /* خروج الجزء المائل من اليسار */
+                top: 0;
+                width: 250px;
+                height: 100%;
+                background: #019688;
+                transform: skewX(-20deg);
+                transform-origin: left center;
+            }
+            /* الخط الأول */
+            
+            h1::after {
+                content: "";
+                position: absolute;
+                left: 60px;
+                top: 0;
+                width: 12px;
+                height: 100%;
+                background: white;
+                transform: skewX(-20deg);
+            }

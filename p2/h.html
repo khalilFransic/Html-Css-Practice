@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>مثال توضيحي للـ Divs المتداخلة</title>
+    <style>
+        /* تنسيقات أساسية للجسم ليتوسط المحتوى عمودياً (للتوضيح فقط) */
+        
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        /* الطبقة 1: السيكشن (الخلفية الكاملة) */
+        
+        .full-width-section {
+            background-color: #e0e0e0;
+            /* رمادي فاتح */
+            width: 100%;
+            /* كامل عرض الشاشة */
+            padding: 50px 0;
+            /* مسافة عمودية */
+        }
+        /* الطبقة 2: الحاوية الرئيسية (توسيط المحتوى) */
+        
+        .centered-container {
+            background-color: white;
+            /* خلفية بيضاء لتميزها */
+            max-width: 800px;
+            /* أقصى عرض للمحتوى */
+            margin: 0 auto;
+            /* أهم خاصية: للتوسيط الأفقي */
+            border: 3px solid #333;
+            /* إطار غامق لنرى حدودها */
+            padding: 20px;
+        }
+        /* الطبقة 3: جزء المحتوى (مثل الـ firstHalf في كودك) */
+        
+        .content-part {
+            background-color: #d1e7dd;
+            /* لون أخضر فاتح جداً */
+            border: 2px dashed #0f5132;
+            /* إطار منقط أخضر */
+            padding: 15px;
+            width: 60%;
+            /* جعل النص يأخذ جزءاً فقط من الحاوية البيضاء */
+        }
+        
+        .text-big {
+            font-size: 2em;
+            margin-top: 0;
+        }
+        
+        .text-small {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="full-width-section">
+
+        <div class="centered-container">
+
+            <div class="content-part">
+                <h1 class="text-big">جافا سكريبت</h1>
+                <p class="text-small">
+                    لغة برمجة عالية المستوى تُستخدم لجعل صفحات الويب تفاعلية وديناميكية. بدون هذا التقسيم، كان النص سيمتد لآخر الشاشة ويصعب تنسيقه بشكل جميل.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

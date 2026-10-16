@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    border: 10px solid green;
+    border-radius: 100px;
+    position: relative;
+}
+
+.circle-1:after {
+    content: "";
+    position: absolute;
+    border-top: 100px solid transparent;
+    top: -35px;
+    left: -86px;
+}
+
+.circle-2:after {
+    content: "";
+    position: absolute;
+    border-top: 100px solid transparent;
+    top: -35px;
+    left: 50px;
+}
+
+.circle-1:after {
+    content: "";
+    border-right: 140px solid #ffffff;
+}
+
+.circle-2:after {
+    content: "";
+    border-left: 140px solid #ffffff;
+}
+
+.circle-1:before {
+    content: "";
+    height: 10px;
+    width: 236px;
+    position: absolute;
+    background: green;
+    left: -8px;
+    top: 54px;
+    z-index: 1;
+}

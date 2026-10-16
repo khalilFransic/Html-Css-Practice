@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand in Hand - Hilfsorganisation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: #f9fafb;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0d9488;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #0d9488;
+        }
+        
+        .section {
+            padding: 80px 10%;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+        
+        .about-section {
+            background-color: #ffffff;
+        }
+        
+        .about-section p {
+            font-size: 18px;
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+        
+        .events-section {
+            background-color: #f3f4f6;
+        }
+        
+        .slider-wrapper {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            scrollbar-width: none;
+        }
+        
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .slide {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 250px;
+        }
+        
+        .slide h3 {
+            font-size: 24px;
+            color: #0d9488;
+            margin-bottom: 15px;
+        }
+        
+        .slide p {
+            color: #4b5563;
+            font-size: 16px;
+        }
+        
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .slider-nav a {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #d1d5db;
+            transition: background-color 0.3s ease;
+        }
+        
+        .slider-nav a:hover {
+            background-color: #0d9488;
+        }
+        
+        .contact-section {
+            background-color: #ffffff;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #0d9488;
+        }
+        
+        .contact-form button {
+            padding: 12px;
+            background-color: #0d9488;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-form button:hover {
+            background-color: #0f766e;
+        }
+        
+        .footer {
+            background-color: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 30px 10%;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Hand in Hand</div>
+        <ul class="nav-links">
+            <li><a href="#about">Über uns</a></li>
+            <li><a href="#events">Veranstaltungen</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2>Über uns</h2>
+            <p>Wir sind eine gemeinnützige Organisation, die sich leidenschaftlich für die Unterstützung von bedürftigen Familien und Kindern einsetzt. Durch Bildung, warme Mahlzeiten und soziale Begleitung schaffen wir eine bessere Zukunft für alle.</p>
+            <p>Gemeinsam können wir Barrieren abbauen und Hoffnung schenken. Jede helfende Hand zählt.</p>
+        </div>
+    </section>
+
+    <section id="events" class="section events-section">
+        <div class="container">
+            <h2>Unsere Veranstaltungen</h2>
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <div class="slide" id="slide-1">
+                        <h3>Spendenlauf 2026</h3>
+                        <p>Laufen Sie mit uns für den guten Zweck am 12. September. Jeder Kilometer bringt uns näher ans Ziel.</p>
+                    </div>
+                    <div class="slide" id="slide-2">
+                        <h3>Sommerfest</h3>
+                        <p>Feiern Sie mit uns am 4. August ein buntes Fest für die ganze Familie mit Live-Musik und Spielen.</p>
+                    </div>
+                    <div class="slide" id="slide-3">
+                        <h3>Weihnachtsbasar</h3>
+                        <p>Finden Sie handgemachte Geschenke und genießen Sie leckere Waffeln auf unserem jährlichen Basar.</p>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2>Kontaktieren Sie uns</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Ihr Name" required>
+                <input type="email" placeholder="Ihre E-Mail" required>
+                <textarea placeholder="Ihre Nachricht" rows="5" required></textarea>
+                <button type="submit">Nachricht senden</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Hand in Hand. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
+
+</html>

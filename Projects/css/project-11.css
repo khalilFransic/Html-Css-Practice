@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+body {
+    background-color: #f1f5f9;
+    /* كحلي عميق جداً يتماشى مع لون الإدخال */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.list {
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.list li a {
+    text-decoration: none;
+    color: #1e293b;
+    font-size: 20px;
+    margin: 5px;
+    display: inline-block;
+    transition: transform 0.4s ease-in;
+    position: relative;
+    font-family: 'Brush Script MT', cursive;
+}
+
+
+/* .list li {
+    border-right: 2px solid black;
+}
+
+.list li:last-child {
+    border-right: none;
+} */
+
+
+/* .list li {
+    position: relative;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in;
+} */
+
+.list li {
+    position: relative;
+}
+
+.list li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 70%;
+    background-color: #3a3a3a;
+    bottom: 7px;
+    right: -8px;
+    /* box-shadow: 2px 4px 4px black; */
+}
+
+.h2 {
+    color: #1e293b;
+    font-family: 'Brush Script MT', cursive;
+    transition: transform 0.4s ease-in;
+}
+
+.h2:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+.try {
+    position: relative;
+    color: black;
+}
+
+.list li a::before {
+    content: "";
+    height: 3px;
+    width: 0px;
+    position: absolute;
+    background-color: #3b82f6;
+    top: 22px;
+    left: 0;
+    transition: width 0.4s ease-in-out;
+    display: block;
+    box-shadow: 0 0 8px #3b82f6;
+}
+
+.list li a:hover {
+    transform: translateY(-2px);
+}
+
+.list li:nth-child(1):hover a::before {
+    width: 53px;
+}
+
+.list li:nth-child(2):hover a::before {
+    width: 53px;
+}
+
+.list li:nth-child(3):hover a::before {
+    width: 40px;
+}
+
+.list li:nth-child(4):hover a::before {
+    width: 55px;
+}
+
+
+/* CSS */
+
+.button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.button-85:before {
+    content: "";
+    background: linear-gradient(45deg, #7a00ff, /* بنفسجي عميق */
+    #00d2ff, /* أزرق سماوي */
+    #9d50bb, /* أرجواني */
+    #6e48aa, /* بنفسجي ملكي */
+    #00ffd5, /* فيروزي (للمسة إضاءة) */
+    #ff00c8, /* وردي قوي */
+    #7a00ff/* العودة للبنفسجي لضمان سلاسة الأنميشن */
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.container {
+    position: relative;
+    margin: 40px auto;
+    width: 500px;
+    z-index: 0;
+    min-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    gap: 100px;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background: gray;
+    isolation: isolate;
+    border-radius: 10px;
+}
+
+.container::before {
+    content: "";
+    background: linear-gradient(45deg, #a5b4fc, /* أزرق لافندر فاتح */
+    #6366f1, /* أزرق نيلي هادئ */
+    #818cf8, /* أرجواني ناعم */
+    #c084fc, /* بنفسجي فاتح */
+    #a5b4fc/* العودة للبداية لسلاسة الحركة */
+    );
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.container:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    height: 200px;
+    z-index: 10;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.input-1 {
+    width: 100%;
+    height: 45px;
+    border: 2px solid black;
+    outline: none;
+    font-size: 20px;
+    padding: 0 15px;
+    background-color: #f9fafb;
+    color: #1f2937;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
